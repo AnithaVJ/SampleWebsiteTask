@@ -1,0 +1,22 @@
+#header{
+	background: #FFF url(../images/bernieLogo.jpg) no-repeat top center;
+    background-size: cover;
+  }
+ 
+.midSection{
+    height: 300px;
+} 
+background-size: auto|640px|cover|contain|initial|inherit;
+.halfMidSection #coloredSection {
+    background-color: #003366;
+    color: #FFF;
+ }
+ 
+#footer {
+    background-color: #003366;
+    color: #FFF;
+}
+
+article, footer, header, nav, section {
+    display: block;
+}
