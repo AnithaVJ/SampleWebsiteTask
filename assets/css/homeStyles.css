@@ -1,22 +1,43 @@
-#header{
+#header {
+	padding:20px;
 	background: #FFF url(../images/bernieLogo.jpg) no-repeat top center;
-    background-size: cover;
-  }
- 
-.midSection{
-    height: 300px;
-} 
-background-size: auto|640px|cover|contain|initial|inherit;
-.halfMidSection #coloredSection {
+    width: 100%;
+    background-size: contain;
+    position: fixed;
+}
+
+#coloredSection {
     background-color: #003366;
     color: #FFF;
  }
- 
-#footer {
-    background-color: #003366;
-    color: #FFF;
+
+.mainMenu a{
+	 padding: 10px;
+     color:black;    
 }
 
-article, footer, header, nav, section {
-    display: block;
+a:link, a:visited {    
+    text-decoration: none;
+ }
+
+#footer {
+	background-color: #003366;
+    color: white;
+   	width:100%;
+	padding: 20px;
+	position:fixed;
+	bottom:0;
+	left:0; 
+ }
+
+
+
+#left{
+  left:10px;
+   text-align: left;   
+}
+
+#right{
+   right: 10px;
+    text-align: right;
 }
