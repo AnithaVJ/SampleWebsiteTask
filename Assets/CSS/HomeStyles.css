@@ -1,0 +1,19 @@
+#footer {
+    font-size: 90%;
+    background-color: #003366;
+    color: #FFF;
+}
+
+
+#midSection {
+    background-color: #003366;
+ }
+
+#header{
+	background: #FFF url(../Images/BernieLogo.jpg) no-repeat top center;
+  	background-size: auto|640px|cover|contain|initial|inherit;
+ }
+
+article, footer, header, nav, section {
+    display: block;
+}

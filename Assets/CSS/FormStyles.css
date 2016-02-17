@@ -64,12 +64,6 @@ tr.spaceUnder > td{
 }
 
 
-#submitButton :hover{
-	background: #F57C00;
-	border-color: #BBBBBB;
-	background-size: auto;
-    }   
-
 .wrapper{
     padding-top: 2em;
     padding-bottom: 3em;
