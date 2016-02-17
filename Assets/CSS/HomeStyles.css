@@ -1,18 +1,21 @@
+#header{
+	background: #FFF url(../Images/BernieLogo.jpg) no-repeat top center;
+    background-size: contain;
+  }
+ 
+.midSection{
+    height: 300px;
+} 
+background-size: auto|640px|cover|contain|initial|inherit;
+.halfMidSection #coloredSection {
+    background-color: #003366;
+    color: #FFF;
+ }
+ 
 #footer {
-    font-size: 90%;
     background-color: #003366;
     color: #FFF;
 }
-
-
-#midSection {
-    background-color: #003366;
- }
-
-#header{
-	background: #FFF url(../Images/BernieLogo.jpg) no-repeat top center;
-  	background-size: auto|640px|cover|contain|initial|inherit;
- }
 
 article, footer, header, nav, section {
     display: block;
