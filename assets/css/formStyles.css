@@ -1,3 +1,9 @@
+body{
+    background: #FFFFFF url("../Images/formBackground.jpg") repeat;
+    background-size: contain;
+}
+
+
 #mainTable{
 	width: 605px;
 	margin-left: auto;
