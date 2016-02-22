@@ -10,46 +10,41 @@ body {
     position:relative;
 }
 
-/*header corrected*/
 #header {
-  background-image: -webkit-linear-gradient(left, #4785b8, #00457d); /* For Chrome and Safari */
-  background-image: -moz-linear-gradient(left, #4785b8, #00457d); /* For old Fx (3.6 to 15) */
-  background-image: -ms-linear-gradient(left, #4785b8, #00457d); /* For pre-releases of IE 10*/
-  background-image: -o-linear-gradient(left, #4785b8, #00457d); /* For old Opera (11.1 to 12.0) */
-  background-image: linear-gradient(to right, #4785b8, #00457d); /* Standard syntax; must be last */
-  width:100%;
-  top:0px;
-  position: fixed;  
-  height:100px;
-  z-index: 2;
+    background-image: -webkit-linear-gradient(left, #0d63aa, #0076d7, #53aaff); /* Chrome and Safari */
+    background-image: -moz-linear-gradient(left, #0d63aa, #0076d7, #53aaff); /* Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(left, #0d63aa, #0076d7, #53aaff); /* pre-releases of IE 10*/
+    background-image: -o-linear-gradient(left, #0d63aa, #0076d7, #53aaff); /* Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, #0d63aa, #0076d7, #53aaff); /* Standard*/
+    width:100%;
+    top:0px;
+    position: fixed;  
+    height:100px;
+    z-index: 2;
 }
  
 #header img{
     float: right;
  }
-#header #nav #menu-main_nav a:link, a:visited{
+ 
+#header #nav #menuMainNav a:link, a:visited{
     font-size: 20px;
-    color: black;     
-}
+    color:#E24242;  
+    font: 400 24px/1.4 'Josefin Sans', Helvetica, Arial, sans-serif;
+ }
 
-/*navigation corrected*/
-#nav li{
+#menuMainNav li{
     list-style: none;
     float: left;
     padding-right: 4em;   
     letter-spacing: 0.15em;  
-    padding-top: 3em;  
+    padding-top: 1.5em;  
  }
  
- /*content corrected*/
 #content {
     width: 100%;
-    left: 0px;
-    right: 0px;
-    margin: 0px;
     padding-top:100px;
     padding-bottom: 100px;
-    /*position: absolute;*/
     z-index: 1;
 }
 
@@ -61,77 +56,63 @@ body {
 #content .right{
    right: 2em;
    position: absolute;   
-   color: black; 
 }
 
-/*content - colored section corrected*/
-#content #coloredSection {
-    background-image: url("../images/secondary-home.jpg");
-    background-repeat: no-repeat;
+#content #imageSection{
+    background: #fff url("../images/homeMainImage.jpg") no-repeat; 
     background-size: cover;
     background-position-x: center;
     height: 430px;
  }
 
-#coloredSection .left{
-    margin-top: 1.7em;  
-}
-
 #quote{
-    font-size: 18px;
-    font-family: 'Papyrus','Book Antiqua', 'Palatino';
-    font-style: italic;
-    text-align: left ;
-    color: black;
+    font: 400 20px/1.4 'Josefin Sans', Helvetica, Arial, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    text-align: left;    
     letter-spacing: 0.1em;
+    padding-top: 0.7em;
   }
 
-/*content - volunteer section corrected*/
 #volunteerSection{    
     height: 11em;
  }
 
-#volunteerSection p{
-    font-size: 18px;
-    font-family: 'Papyrus','Book Antiqua', 'Palatino';
-    font-style: italic;
-    text-align: center ;
-    color: black;
-    letter-spacing:  0.1em;
+#volunteerSection .right{
     padding-right: 9em;
+}
+
+#volunteerSection p{
+    font: 400 20px/1.2 'DANCING Script',  Georgia, Times, serif;
+    color: #2A2A2A;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    text-align: center ;  
+    letter-spacing:  0.1em;   
   }
 
-#volunteerSection img{
+#volunteerSection .left{
     padding-left: 9em;
     padding-top: 1.3em;
 }
 
 
-/* link */
-a:link, a:visited {    
-    text-decoration: none;
- }
-
-/* Footer corrected */
 #footer {
-    
-  background-image: -webkit-linear-gradient(left, #4785b8, #00457d); /* For Chrome and Safari */
-  background-image: -moz-linear-gradient(left, #4785b8, #00457d); /* For old Fx (3.6 to 15) */
-  background-image: -ms-linear-gradient(left, #4785b8, #00457d); /* For pre-releases of IE 10*/
-  background-image: -o-linear-gradient(left, #4785b8, #00457d); /* For old Opera (11.1 to 12.0) */
-  background-image: linear-gradient(to right, #4785b8, #00457d); /* Standard syntax; must be last */
-  width:100%;
-    
-    color: white;
+    border:  0.15em solid #4785b8;
+    width:100%;    
+    color: #00457d;
     height:5em;
     left: 0px;
     bottom: 0px;
-    right: 0px; 
-    z-index: 1;
-   position: fixed;
+    right: 0px;  
+    position: absolute;
 }
 
-#footer .left{
+.billionaire{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.4em;
+ }
+ 
+ #footer .left{
     left: 2em;
     position: absolute;    
 }
@@ -140,16 +121,29 @@ a:link, a:visited {
     right: 2em;
     position: absolute;          
 }
+
 #footer .center{
     left:43%;
     text-align: center;
     position: absolute;
  }
  
+#footerLink a{
+    color: #00457d;
+}
+
 footer, header, nav, section {
      display: block;
 }
 
-#footerLink a{
-    color: white;
+a:link, a:visited {    
+    text-decoration: none;
+ }
+ 
+li a:hover{
+     background-color: #00457d;
+ }
+
+#footer a:hover{
+    background-color: grey;
 }
