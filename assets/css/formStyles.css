@@ -20,7 +20,7 @@ body{
     padding-bottom: 10px;
   }
 
-#inline_grid {
+#inlineGrid{
     border-collapse:collapse;
 	border-spacing:0;
 	font-size:1em;
@@ -81,20 +81,20 @@ tr.spaceUnder > td{
 }
 
 .inputFields{
-     text-align: left;
-     height: 20px;  
-     font-size: 12px;     
+    text-align: left;
+    height: 20px;  
+    font-size: 12px;     
   }
     
 #subText{
-     text-align: center;
-     font-size: 18px; 
-     font-style: italic; 
+    text-align: center;
+    font-size: 18px; 
+    font-style: italic; 
      
     display: table;
     margin: 0 auto;
     text-align: center; 
     
-     padding-top: 7px;
+    padding-top: 7px;
     padding-bottom: 25px;
 }

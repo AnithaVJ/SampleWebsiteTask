@@ -3,14 +3,13 @@
 
 <head>
 	<link rel="stylesheet" href="../assets/css/formStyles.css">
-	<script src="../js/registration.js"></script>
 	<meta charset="UTF-8">
 	<title>Volunteer Signup</title>
 </head>
 
 <body>
-	<label id = "registrationHeader">Volunteer signup form</label>	
-    <label id= "subText">Fill in the information below to indicate how you would like to become involved.</label>
+	<p id = "registrationHeader">Volunteer signup form</p>	
+    <p id= "subText">Fill in the information below to indicate how you would like to become involved.</p>
 	
    <form>
 	<table id = "mainTable"> 
@@ -92,7 +91,7 @@
 		</tr>
 
 		<tr class="spaceUnder"> <td colspan="4">
-			<table id = "inline_grid">
+			<table id = "inlineGrid">
 			<tr>
 				<td>
 					<input type="radio" name="flyerPosters" value="flyerPosters"><label for="flyerPosters">Flyer or posters</label>			
@@ -125,7 +124,7 @@
 
 		<tr class="spaceUnder">
 			<td colspan="3">
-		<table id = "inline_grid">
+		<table id = "inlineGrid">
 			<tr>	
 				<td>
 					<input type="checkbox" name="doorToDoor" value="doorToDoor"><label for="doorToDoor">Knock on doors</label>				
@@ -176,7 +175,7 @@
   </form>
   
 	<div class = "wrapper">
-		<input type="submit" name="Submit" value="Submit" id="submitButton">
+		<input type="submit" name="Submit" value="Submit" id="submitButton" onclick="validateAll()">
 	</div>
 </body>
 
