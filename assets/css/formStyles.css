@@ -6,18 +6,16 @@ body{
 
 #mainTable{
 	width: 605px;
-	margin-left: auto;
-	margin-right: auto;
+    margin: 0 auto;
+
 	border-radius: 4px;
 	border: 1px solid #CCCCCC;
 	color: #333333;
+
 	overflow: hidden;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
     
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding: 1em 1em 1em 1em;
   }
 
 #inlineGrid{
@@ -28,33 +26,35 @@ body{
 }
 
 tr.spaceUnder > td{
-  padding-bottom: 2em;
-  padding-left: 1em;
+   padding-bottom: 2em;
+   padding-left: 1em;
 }
 
 #submitButton {
-	color: #FFFFFF !important;
+	color: #FFFFFF;
+
     background: #111111;
 	background-size: auto;
-	border-style: none;
-   	border-width: 1px;
-	border-color: #FFFFFF;
+
+    border: 1px none #FFFFFF;	
 	border-radius: 4px;
+
 	display: table;
     margin: 0 auto;
     text-align: center;
-	font-family: 'Roboto',sans-serif;
-	font-size: 14px;
-	font-weight: bold;
+
+    font: normal none bold 14px 'Roboto',sans-serif;
+	
 	min-width: 25%;
-	padding: 10px 10px;
+
+	padding: 0.7em 0.7em;
 	text-transform: uppercase;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
 }
 
 
 #registrationHeader{
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     background: #111111;
 	background-size: auto;
     border-style: none;
@@ -95,6 +95,6 @@ tr.spaceUnder > td{
     margin: 0 auto;
     text-align: center; 
     
-    padding-top: 7px;
-    padding-bottom: 25px;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 }
