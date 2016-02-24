@@ -1,6 +1,8 @@
-body{
-    background: #FFFFFF url("../Images/formBackground.jpg") repeat;
-    background-size: contain;
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 #header {
@@ -14,7 +16,7 @@ body{
     position: fixed;  
     height:100px;
     z-index: 2;
-}
+ }
  
 #header img{
     float: right;
@@ -43,7 +45,8 @@ body{
     left: 0px;
     bottom: 0px;
     right: 0px;  
-    position: absolute;
+    position: relative;
+
 }
 
 .billionaire{
@@ -87,7 +90,41 @@ li a:hover{
     background-color: grey;
 }
 
+#content {
+    width: 100%;
+    padding-top:130px;    
+    z-index: 1;
+}
 
+
+#registrationHeader{
+    color: #FFFFFF;
+    background: #111111;
+    background-size: auto;
+    border-style: none;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    
+    min-width:55%;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+
+
+#subText{
+    text-align: center;
+    font: 400 20px/1.2 'DANCING Script',  Georgia, Times, serif;    
+     
+    display: table;
+    margin: 0 auto;
+    text-align: center; 
+    
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
 
 #mainTable{
 	width: 605px;
@@ -117,43 +154,21 @@ tr.spaceUnder > td{
 
 #submitButton {
 	color: #FFFFFF;
-
     background: #111111;
-	background-size: auto;
-
     border: 1px none #FFFFFF;	
 	border-radius: 4px;
-
 	display: table;
     margin: 0 auto;
     text-align: center;
 
-    font: normal none bold 14px 'Roboto',sans-serif;
-	
+    font: normal bold 15px 'Roboto',sans-serif;
+
 	min-width: 25%;
 
 	padding: 0.7em 0.7em;
 	text-transform: uppercase;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
 }
-
-
-#registrationHeader{
-    color: #FFFFFF;
-    background: #111111;
-	background-size: auto;
-    border-style: none;
-    display: table;
-    margin: 0 auto;
-    text-align: center;
-	font-family: 'Roboto',sans-serif;
-	font-size: 30px;
-	
-	min-width:55%;
-    padding: 10px 10px;
-	text-transform: uppercase;
-}
-
 
 .wrapper{
     padding-top: 2em;
@@ -168,18 +183,7 @@ tr.spaceUnder > td{
 .inputFields{
     text-align: left;
     height: 20px;  
-    font-size: 12px;     
+    font-size: 13px;     
   }
     
-#subText{
-    text-align: center;
-    font-size: 18px; 
-    font-style: italic; 
-     
-    display: table;
-    margin: 0 auto;
-    text-align: center; 
-    
-    padding-top: 0.5em;
-    padding-bottom: 1em;
-}
+
