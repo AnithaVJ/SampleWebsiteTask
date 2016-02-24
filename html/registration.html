@@ -37,7 +37,7 @@
 				<label class = "question">Name: </label>
 			</td>
 			<td>
-				<input type="text" onblur="requiredFieldLeft(this);" name="firstName" placeholder="First name" size="25" maxlength="255" value="" class = "inputFields" id="fName"  required>
+				<input type="text" onblur="requiredFieldLeft(this);" name="firstName" placeholder="First name" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 			<td>
 				<input type="text" name="middleName" onblur="changeCase(this);" size="25" placeholder="Middle name" maxlength="255" value ="" class = "inputFields">
@@ -53,14 +53,16 @@
 				<label class = "question">Age: </label>
 			</td>
 			<td>
-				<input type="number" min="16" step="1" placeholder="15+" onblur="requiredFieldLeft(this);" id="ageField" size="25" maxlength="255" value="" class = "inputFields" required>
+				<input type="number" min="16" step="1" placeholder="15+" onblur="requiredFieldLeft(this);" id="ageField" name="ageField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 
 			<td align="right">
 				<label class = "question">DOB: </label>
 			</td>
 			<td>
-				<input type="date" onblur="requiredFieldLeft(this);" name="dobField" size="25" maxlength="255" value="" class = "inputFields" required>
+				<input type="date" onblur="requiredFieldLeft(this);" name="dobField" id= "dobField" size="25" maxlength="255" value="" class = "inputFields" required>
+
+				
 			</td>
 		</tr>	
 
@@ -90,14 +92,14 @@
 				<label class = "question">Email Address: </label>
 			</td>
 			<td>
-				<input type="text" onblur="requiredFieldLeft(this);" id="emailField" size="25" maxlength="255" value="" class = "inputFields" required>
+				<input type="text" onblur="requiredFieldLeft(this);" id="emailField" name="emailField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 
 			<td  align="right">
 				<label class = "question">Phone: </label>
 			</td>
 			<td>
-				<input type="number" onblur="requiredFieldLeft(this);" name="phoneField" size="25" maxlength="255" value="" class = "inputFields" required>
+				<input type="number" onblur="requiredFieldLeft(this);" name="phoneField" id="phoneField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 		</tr>	
 
@@ -185,7 +187,7 @@
 
 		<tr>
 			<td colspan = "3">
-				<textarea name="moreAboutSelf" rows="10" cols="80"></textarea>
+				<textarea name="moreAboutSelf" id="moreAboutSelf" rows="10" cols="80"></textarea>
 			</td>
 		</tr>			
 	</table>	

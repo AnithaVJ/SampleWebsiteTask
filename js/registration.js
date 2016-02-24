@@ -25,7 +25,7 @@ function changeCase(element){
 function validateAll()
 {
   var message = ""; 
-var allowSubmit = true;
+  var allowSubmit = true;
   var button = document.getElementById('submitButton')
   var flag =0;
   
@@ -77,7 +77,31 @@ else if (flag == 0){
     }
 
     //checking dob
-   //checking phone number
+    var dob=document.getElementById("dobField");
+    var a = new Date("1927-01-01");
+    var b = new Date("2000-01-01");
+    var dt = new Date(dob.value);
+    if( dt >= a && dt <= b)
+        dob.style.backgroundColor = "";
+    else{
+        dob.style.backgroundColor = "yellow";
+        allowSubmit = false;
+        message = message.concat(" Invalid DOB! ");
+        }
+
+
+    //checking phone number
+    var phoneRegex ="^((((\(\d{3}\))|(\d{3}-))\d{3}-\d{4})|(\+?\d{2}((-| )\d{1,8}){1,5}))(( x| ext)\d{1,5}){0,1}$";
+    var phNo=document.getElementById("phoneField");
+    if(phNo.value.match(phoneRegex))
+        phNo.style.backgroundColor = "";    
+    else{
+        phNo.style.backgroundColor = "yellow";
+        allowSubmit = false;
+        message = message.concat(" Invalid phone number! ");
+        }   
+
+
 
     //checking age
     var age = document.getElementById('ageField'); 
