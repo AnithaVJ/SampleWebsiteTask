@@ -2,7 +2,7 @@
 
 function requiredFieldLeft(element) {      
     if(element.value==null || element.value==""){
-        element.style.backgroundColor = "yellow";
+        element.style.backgroundColor = "moccasin";
        }
 
     else if (element.id != "emailField"){
@@ -56,7 +56,7 @@ else if (flag == 0){
     if(emailId.value.match(re))
         emailId.style.backgroundColor = "";    
     else{
-        emailId.style.backgroundColor = "yellow";
+        emailId.style.backgroundColor = "moccasin";
         allowSubmit = false;
         message = message.concat(" Invalid email! ");
         }   
@@ -84,7 +84,7 @@ else if (flag == 0){
     if( dt >= a && dt <= b)
         dob.style.backgroundColor = "";
     else{
-        dob.style.backgroundColor = "yellow";
+        dob.style.backgroundColor = "moccasin";
         allowSubmit = false;
         message = message.concat(" Invalid DOB! ");
         }
@@ -96,7 +96,7 @@ else if (flag == 0){
     if(phNo.value.match(phoneRegex))
         phNo.style.backgroundColor = "";    
     else{
-        phNo.style.backgroundColor = "yellow";
+        phNo.style.backgroundColor = "moccasin";
         allowSubmit = false;
         message = message.concat(" Invalid phone number! ");
         }   
@@ -108,7 +108,7 @@ else if (flag == 0){
     if(age.value < 16 || age.value>90){
         allowSubmit = false;
         message = message.concat(" Age must be between 16-90! ");
-        age.style.backgroundColor ="yellow";
+        age.style.backgroundColor ="moccasin";
         }                
     else{
         age.style.backgroundColor = "";        
