@@ -3,8 +3,7 @@ body {
     margin:0;
     padding:0;
     height:100%;
-    background: #fff url("../images/formBackground.jpg") repeat;
-    background-size: cover; 
+   
 }
 
 #header {
@@ -17,15 +16,14 @@ body {
     top:0px;
     position: fixed;  
     height:100px;
-    z-index: 2;
+    z-index: 5;
  }
  
 #header img{
     float: right;
- }
+}
  
 #header #nav #menuMainNav a:link, a:visited{
-    font-size: 20px;
     color:#E24242;  
     font: 400 24px/1.4 'Josefin Sans', Helvetica, Arial, sans-serif;
  }
@@ -52,8 +50,7 @@ body {
 }
 
 .billionaire{
-    font-family: 'Brush Script MT', cursive;
-    font-size: 1.4em;
+    font: 1.4em 'Brush Script MT', cursive;
  }
  
  #footer .left{
@@ -76,8 +73,8 @@ body {
     color: #00457d;
 }
 
-footer, header, nav, section {
-     display: block;
+footer, header, nav {
+    display: block;
 }
 
 a:link, a:visited {    
@@ -85,17 +82,18 @@ a:link, a:visited {
  }
  
 li a:hover{
-     background-color: #00457d;
+    background-color: #00457d;
  }
 
 #footer a:hover{
-    background-color: grey;
+    background-color: gray;
 }
 
 #content {
     width: 100%;
-    padding-top:130px;    
-    z-index: 1;
+    padding-top:130px; 
+    background: #fff url("../images/formBackground.jpg") repeat;
+    background-size: cover;    
 }
 
 
@@ -107,11 +105,9 @@ li a:hover{
     display: table;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    
+    font: 30px 'Josefin Sans', Helvetica, Arial, sans-serif;     
     min-width:55%;
-    padding: 10px 10px;
+    padding: 0.5em 0.5em;
     text-transform: uppercase;
 }
 
@@ -145,7 +141,7 @@ li a:hover{
 #inlineGrid{
     border-collapse:collapse;
 	border-spacing:0;
-	font-size:1em;
+    font: 1em 'Vollkorn';
 	margin-bottom:1px;
 }
 
@@ -163,7 +159,7 @@ tr.spaceUnder > td{
     margin: 0 auto;
     text-align: center;
 
-    font: normal bold 15px 'Roboto',sans-serif;
+    font: normal bold 15px 'Josefin Sans', Helvetica, Arial;
 
 	min-width: 25%;
 
@@ -174,18 +170,17 @@ tr.spaceUnder > td{
 
 .wrapper{
     padding-top: 2em;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
 }
 
 .question{
-    font-weight: bold;
-    font-size: 18px;
+    font: normal bold 18px 'Vollkorn';
 }
 
 .inputFields{
     text-align: left;
     height: 20px;  
     font-size: 13px;     
-  }
+}
     
 
