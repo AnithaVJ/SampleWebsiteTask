@@ -3,87 +3,108 @@
 
 <head>
 	<link rel="stylesheet" href="../assets/css/formStyles.css">
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn" rel='stylesheet' type='text/css'>
+	<script src="../js/registration.js"></script>
 	<meta charset="UTF-8">
 	<title>Volunteer Signup</title>
 </head>
 
 <body>
-		 <label id = "registrationHeader">Volunteer signup form</label>	
-     <label id= "subText">Fill in the information below to indicate how you would like to become involved.</label>
+	<div id="header">
+            <header id="headerContent">			
+		      <nav id ="nav">
+                  <ul id = "menuMainNav">
+				    <li><a href= "index.html"> Home </a></li>
+				    <li><a href= "https://berniesanders.com/about/"> Bio </a></li>
+				    <li><a href= "http://map.berniesanders.com/"> Events </a></li>
+				    <li><a href= "https://berniesanders.com/issues/">Issues </a></li>	
+                  </ul>				
+	       		</nav>
+	      	 		<img src = "../assets/images/bernieLogo.jpg" height=90px width=280px title="Bernie Logo">
+     		</header>
+		</div><!-- #header -->
+
+	<div id="content">
+	<p id = "registrationHeader">Volunteer signup form</p>	
+    <p id= "subText">Fill in the information below to indicate how you would like to become involved.</p>
 	
-   <form>
+   <form name="signUpForm">
 	<table id = "mainTable"> 
-		<!name>
+		
 		<tr class="spaceUnder">
 			<td>
 				<label class = "question">Name: </label>
 			</td>
 			<td>
-				<input type="text" name="firstName" size="25" maxlength="255" value="" class = "inputFields">
+				<input type="text" onblur="requiredFieldLeft(this);" name="firstName" placeholder="First name" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 			<td>
-				<input type="text" name="middleName" size="25" maxlength="255" value ="" class = "inputFields">
+				<input type="text" name="middleName" onblur="changeCase(this);" size="25" placeholder="Middle name" maxlength="255" value ="" class = "inputFields">
 			</td>
 			<td>
-				<input type="text" name="lastName" size="25" maxlength="255" value="" class = "inputFields">
+				<input type="text"  onblur="requiredFieldLeft(this);" name="lastName" size="25" placeholder="Last name" maxlength="255" value="" class = "inputFields" required>
 			</td>
 		</tr>	
 
-		<!age, dob>
+		
 		<tr class="spaceUnder">
 			<td>
 				<label class = "question">Age: </label>
 			</td>
 			<td>
-				<input type="text" name="ageField" size="25" maxlength="255" value="" class = "inputFields">
+				<input type="number" min="16" step="1" placeholder="15+" onblur="requiredFieldLeft(this);" id="ageField" name="ageField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 
 			<td align="right">
 				<label class = "question">DOB: </label>
 			</td>
 			<td>
-				<input type="text" name="dobField" size="25" maxlength="255" value="" class = "inputFields">
+				<input type="date" onblur="requiredFieldLeft(this);" name="dobField" id= "dobField" size="25" maxlength="255" value="" class = "inputFields" required>
+
+				
 			</td>
 		</tr>	
 
-		<!gender>
+	
 		<tr class="spaceUnder">
 			<td>
 				<label class = "question">Gender: </label>
 			</td>
 
 			<td>
-				<input type="radio" name="genderFemale" value="female"><label for="genderFemale">Female</label>				
+				<input type="radio" name="gender" value="female" checked required><label for="genderFemale">Female</label>				
 			</td>
 
 			<td>	
-				<input type="radio" name="genderMale" value="male"><label for="genderMale">Male</label>			
+				<input type="radio" name="gender" value="male" required><label for="genderMale">Male</label>			
 			</td>
 
 			<td>
-				<input type="radio" name="others" value="others"><label for="others">Others</label>				
+				<input type="radio" name="gender" value="others" required><label for="others">Others</label>				
 			</td>
 			
 		</tr>	
 
-		<!email, phone>
+	
 		<tr class="spaceUnder">
 			<td>
 				<label class = "question">Email Address: </label>
 			</td>
 			<td>
-				<input type="text" name="emailField" size="25" maxlength="255" value=""class = "inputFields">
+				<input type="text" onblur="requiredFieldLeft(this);" id="emailField" name="emailField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 
 			<td  align="right">
 				<label class = "question">Phone: </label>
 			</td>
 			<td>
-				<input type="text" name="dobField" size="25" maxlength="255" value="" class = "inputFields">
+				<input type="number" onblur="requiredFieldLeft(this);" name="phoneField" id="phoneField" size="25" maxlength="255" value="" class = "inputFields" required>
 			</td>
 		</tr>	
 
-		<!how did you hear>
+	
 		<tr>
 			<td colspan="3">
 				<label class = "question">How did you hear about the Campaign? </label>
@@ -91,31 +112,31 @@
 		</tr>
 
 		<tr class="spaceUnder"> <td colspan="4">
-			<table id = "inline_grid">
+			<table id = "inlineGrid">
 			<tr>
 				<td>
-					<input type="radio" name="flyerPosters" value="flyerPosters"><label for="genderFemale">Flyer or posters</label>			
+					<input type="radio" name="firstInformer" value="flyerPosters" checked required><label for="flyerPosters">Flyer or posters</label>			
 				</td>
 			</tr>
 			<tr>
 				<td>	
-					<input type="radio" name="friendFamily" value="friendFamily"><label for="genderMale">Friend or family</label>			
+					<input type="radio" name="firstInformer" value="friendFamily" required><label for="friendFamily">Friend or family</label>			
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="radio" name="newspaperAd" value="newspaperAd"><label for="others">Newspaper advertisement</label>			
+					<input type="radio" name="firstInformer" value="newspaperAd" required><label for="newspaperAd">Newspaper advertisement</label>			
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="radio" name="socialMedia" value="socialMedia"><label for="genderFemale">Social Media</label>			
+					<input type="radio" name="firstInformer" value="socialMedia" required><label for="socialMedia">Social Media</label>			
 				</td>
 			</tr>	
 		</table>
 		</td></tr>
 
-		<!volunteer interest>
+	
 		<tr>
 			<td colspan="3">
 				<label class = "question">How would you like to volunteer? </label>
@@ -124,41 +145,41 @@
 
 		<tr class="spaceUnder">
 			<td colspan="3">
-		<table id = "inline_grid">
+		<table id = "inlineGrid">
 			<tr>	
 				<td>
-					<input type="checkbox" name="doorToDoor" value="doorToDoor"><label for="doorToDoor">Knock on doors</label>				
+					<input type="checkbox" name="interestedActivity" value="doorToDoor" checked required><label for="doorToDoor">Knock on doors</label>				
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="checkbox" name="callVoters" value="callVoters"><label for="callVoters">Call voters</label>	
+					<input type="checkbox" name="interestedActivity" value="callVoters" required><label for="callVoters">Call voters</label>	
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="checkbox" name="callText" value="callText"><label for="callText">Call or text other volunteers</label>	
+					<input type="checkbox" name="interestedActivity" value="callText" required><label for="callText">Call or text other volunteers</label>	
 				</td>
 			</tr>
 			<tr>
 				<td>	
-					<input type="checkbox" name="hostEvent" value="hostEvent"><label for="hostEvent">Host an event at your home, office or public venue</label>				
+					<input type="checkbox" name="interestedActivity" value="hostEvent" required><label for="hostEvent">Host an event at your home, office or public venue</label>				
 				</td>
 			</tr>
 			<tr>
 				<td>	
-					<input type="checkbox" name="helpEvent" value="helpEvent"><label for="helpEvent">Help at a local event</label>			
+					<input type="checkbox" name="interestedActivity" value="helpEvent" required><label for="helpEvent">Help at a local event</label>			
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="checkbox" name="techSupport" value="techSupport"><label for="techSupport">Tech support</label>				
+					<input type="checkbox" name="interestedActivity" value="techSupport" required><label for="techSupport">Tech support</label>				
 				</td>					
 			</tr>	
 		</table>
 		</td></tr>
 
-		<!more about self>
+		
 		<tr>
 			<td colspan="3">
 				<label class = "question">If you like, tell us more about yourself:</label>
@@ -167,16 +188,26 @@
 
 		<tr>
 			<td colspan = "3">
-				<textarea name="moreAboutSelf" rows="10" cols="80"></textarea>
+				<textarea name="moreAboutSelf" id="moreAboutSelf" rows="10" cols="80"></textarea>
 			</td>
-		</tr>
-			
-	</table>
+		</tr>			
+	</table>	
   </form>
   
 	<div class = "wrapper">
-		<input type="submit" name="Submit" value="Submit" id="submitButton">
+		<input type="button" name="Submit" value="Submit" id="submitButton" onclick="validateAll()">
 	</div>
+
+	</div>
+	<div id="footer">
+            <footer id= "footerContent">
+			     <p class = "left">
+                     BERNIE 2016<br>PO BOX 905<br>BURLINGTON, VT 05402
+                 </p>
+			     <p class = "center">PAID FOR BY BERNIE 2016<br><span class="billionaire">not the billionaires</span></p>
+			     <p class = "right" id = "footerLink"><a  href="https://berniesanders.com/privacy-policy/">Privacy policy</a></p>
+			</footer>
+		</div><!-- #footer -->		
 </body>
 
 </html>
